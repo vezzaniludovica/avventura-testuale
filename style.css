@@ -1,0 +1,55 @@
+h1 {
+	text-align: center;
+	color: white;
+}
+
+
+nav{
+	background-color: black;
+}
+
+p {
+	text-align: center;
+	color: white;
+}
+
+.blocco{
+	height: 350px;
+	background-image: url(studi.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.jumbotron {
+	background-color: black;
+	text-align: center;
+}
+#regole{
+	color:black;
+	text-align: center;
+	align-self: center;
+	padding-bottom: 10px;
+}
+#storia, .storia{
+	color:white;
+	font-family: "Times New Roman";
+	font-size: 150%;
+	background-color: black;
+}
+
+.card{
+	background-color: transparent;
+}
+
+button{
+	text-align: center;
+	
+}
+
+.scelta{
+	padding: 100px;
+}
+
+body{
+	background-color: black;
+}

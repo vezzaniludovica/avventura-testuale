@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Avventura testuale</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    @import url(style.css);
+  </style>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Lepido</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Info</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Pages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#" onclick="alert('fa poco il furbo, se vuoi vincere gioca')">Win</a>
+          <a class="dropdown-item" href="loser.html">Loss</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Lepido</h1>
+        <p class="lead">Immergiti nei panni di Lepido, giovane romano di umili origini chiamato a scalare il cursus honorum. Riuscirai a diventare il prossimo imperatore di Roma?</p>    
+        <button type='button'class="btn btn-primary" onclick="document.getElementById('regole').style.display='block'" >Scoprilo ora</button>   
+      </div>   
+  </div>
+<div id="regole" style="display: none;">
+  <ol style="color: white">
+    <li>Ti verranno proposte due scelte, potrai sceglierne solo una</li>
+    <li>Il successo di Lepido dipende solo dalle tue scelte, scegli con cura!</li>
+    <li>Il gioco continua anche se clicchi su una scelta sbagliata, scoprirai solo alla fine se sarai riuscito a diventare imperatore</li> 
+  </ol>
+  <button type='button'class="btn btn-primary" onclick="studi()" >Vai avanti</button>
+ </div>
+
+
+
+ <div id="studi" class="blocco" style="display: none;">
+  <h1 id="storia"><b><i>Lepido nasce nel 49 a.C a Roma da una famiglia benestante. Tuo padre ha una bottega e ti permette di scegliere il tuo percorso di studi. Quale scegli? </i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(0)">Filosofici</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(1)">Giuridici</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="filosofici" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Per gli studi filosofici cambia città e si reca a  </i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(2)">Napoli</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(3)">Atene</button>
+  </div>
+  </div>
+  </div>
+</div>
+  </div>
+
+  <div id="napoli" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Finiti gli studi </i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm-6" style="text-align: center;">
+      <button type="button" class="btn btn-outline-dark btn-block" onclick="fine()">Diventi docente di filosofia e retorica</button>
+     </div>
+     <div class="col-sm-6">
+      <button type="button" class="btn btn-outline-dark btn-block" onclick="fine()">Scopri la passione per la scrittura e inizi a scrivere trattati filosofici</button>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="atene" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Finiti gli studi, nel 30a.C...</i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm-6" style="text-align: center;">
+      <button type="button" class="btn btn-outline-light btn-block" onclick="choice(4)">Torni a Roma</button>
+     </div>
+     <div class="col-sm-6">
+      <button type="button" class="btn btn-outline-light btn-block" onclick="choice(5)">Ti stabilisci ad Atene con Elena, una cortigiana conosciuta durante gli studi.</button>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="morte" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>La cortigiana si rivela una gold digger e per arrivare ai tuoi beni decide di avvelenarti</i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm" style="text-align: center;">
+      <button type="button" class="btn btn-outline-dark btn-block" onclick="fine()">Fine</button>
+     </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="Orazio" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Una volta tornato a Roma conosci Orazio che ti fa entrare nel suo giro di letterati. Come agisci?</i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm-6" style="text-align: center;">
+      <button type="button"  class="btn btn-outline-light btn-block" onclick="choice(6)">Ti dedichi alla letteratura</button>
+     </div>
+     <div class="col-sm-6">
+      <button type="button"class="btn btn-outline-light btn-block" onclick="choice(7)">Insulti Orazio per le sue opere insulse</button>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="letterato" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Dopo aver sposato una splendida donna romana, aver avuto due figli e scritto innumerevoli opere di ottima fattura letteraria alla veneranda età di 51 anni ti viene un arresto cardiaco</i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm" style="text-align: center;">
+      <button type="button" class="btn btn-outline-dark btn-block" onclick="fine()">Fine</button>
+     </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="litigio" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Orazio inizia a dire che sei un arrampicatore sociale. Perdi le staffe e...</i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm-6" style="text-align: center;">
+      <button type="button" class="btn btn-outline-light btn-block" onclick="choice(8)">Dopo qualche imprecazione chiedi scusa ad Orazio</button>
+     </div>
+     <div class="col-sm-6">
+      <button type="button" class="btn btn-outline-light btn-block" onclick="choice(9)">Inizi a prendere a pugni Orazio ferendolo gravemente</button>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="prigione" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Improvvisamente irrompono nell'edificio due edili curuli che decidono di arrestarti. Verrai condannato al carcere a vita</i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm" style="text-align: center;">
+      <button type="button" class="btn btn-outline-dark btn-block" onclick="fine()">fine</button>
+     </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="raccomandazione" class="blocco" style="display: none;">
+    <h1 class="storia"><b><i>Orazio elogia le tue capacità di autocontrollo e decide di raccomandarti come console/i></b></h1>
+      <div class="scelta" class="container-fluid">
+        <div class="row">
+     <div class="col-sm" style="text-align: center;">
+      <button type="button" class="btn btn-outline-light btn-block" onclick="choice(12)">Diventi console</button>
+     </div>
+    </div>
+    </div>
+  </div>
+
+ <div id="giuridici" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Una volta diventato avvocato decide di </i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(10)">Seguire la carriera politica</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(11)">Esercitare la professione</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+ <div id="politica" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Una volta intrapreso il cursus honorum ti vengono proposte due cariche differenti. Quale scegli?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button"  class="btn btn-outline-light btn-block" onclick="choice(12)">Console</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(13)">Pretore</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="consolato" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>31 a.C, sei assoldato come generale nell'esercito di Ottaviano per la battaglia di Azio. Marco Antonio (rivale di Ottaviano) ti offre poteri smisurati e ricchezze in cambio di fedeltà. Cosa fai?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(14)">Tradisci Ottaviano</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(15)">Rimani fedele al tuo comandante</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="pretura" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Dopo pochi anni di professione il consiglio ti offre il ruolo di governatore in due diverse province. Dove vuoi governare?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button"  class="btn btn-outline-light btn-block" onclick="choice(16)">In Britannia</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(17)">In Siria</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+ <div id="avvocato" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>La professione inizia a diventare redditizia ma nel 27a.C viene commesso un pluriomicidio di avvocati da parte di un fanatico, proprio davanti ai tuoi occhi. Cosa decidi di fare?  </i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(18)">Suicidarti per lo shock e per la paura</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(19)">Entrare in politica come pretore per contrastare il potere crescente di Ottaviano Augusto</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="pretura2" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Dopo pochi anni di professione il consiglio ti offre il ruolo di governatore in due diverse province. Dove vuoi governare?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(16)">In Britannia</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(17)">In Siria</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="suicidio" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i> Dopo aver preso questa drastica decisione e aver comprato una corda e una sedia... </i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Maledici Giove per la tua triste e inutile esistenza</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Te ne vai in silenzio</button>
+   </div>
+    </div>
+  </div>
+</div>
+
+<div id="Britannia" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Durante la tua permanenza in Britannia sei costretto a fare i conti con le ribellioni barbariche. Come ti comporti?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(19)">Decidi di mediare coi ribelli pur scatenando la furia dell'imperatore</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(20)">Decidi di reprimere violentemente le rivolte</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="mediazione" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Provi a mediare con i barbari ma dopo averlo scoperto Ottaviano ti fa assassinare da un sicario</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Fine</button>
+   </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="repressione" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Dopo aver provato ad affogare nel sangue le rivolte i barbari ti tnedono un'imboscata e decidono di decapitarti.</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Fine</button>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="Siria" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Arrivi in Siria nel 35a.C e dopo aver stretto una salda amicizia col politico Marco Antonio ti trovi di fronte ad una scelta difficile nel 31a.C, alle porte di una guerra tra il tuo amico e Ottaviano </i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(14)">Ti schieri con Antonio</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(15)">Ti schieri con Augusto</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="tradimento" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Dopo esserti schierato con Antonio vieni dichiarato immediatamente "hostis publicus". Antonio perisce in battaglia e tutto sembra perduto ma grazie alla tua astuzia ti trovi nella condizione di poter uccidere Ottaviano. L'imperatore ti promette la carica di imperatore in cambio della sua vita. Cosa fai?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(21)">Uccidi Ottaviano Augusto</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button"  class="btn btn-outline-light btn-block" onclick="choice(22)">Risparmi Ottaviano Augusto</button>
+  </div>
+  </div>
+  </div>
+</div>
+<div id="misericordia" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Dopo averlo risparmiato l'imperatore decide di catturarti e di ordinare la tua esecuzione il 7 Novembre del 30a.C</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Fine</button>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="fedeltà" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>La fedeltà ti ripaga; Ottaviano vince la guerra e ti nomina console. Come lo ringrazi?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(21)">Gli regali una lama nel cuore</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(23)">Ti piace la vita da console e gli scrivi una poesia </button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="uccisione" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Uccidendo Ottaviano ti sei assicurato l'appoggio dell'esercito. Come agisci ora?</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm-6" style="text-align: center;">
+    <button type="button" class="btn btn-outline-light btn-block" onclick="choice(24)">Marci su Roma con l'esercito occupando anche il Senato</button>
+   </div>
+   <div class="col-sm-6">
+    <button type="button"  class="btn btn-outline-light btn-block" onclick="choice(25)">Cerchi un accordo col Senato</button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div id="accordo" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Mentre contratti col Senato il giovanissimo Tiberio figlio di Ottaviano raduna delle milizie formate da mercenari e ti coglie di sorpresa trafiggendoti la giugulare durante la battaglia del Foro</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Fine</button>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="felicità" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Nonostante tu sia felice non sei riuscito a diventare imperatore e quando Ottaviano scopre della tua vecchia amicizia con Antonio decide di farti assassinare.</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="fine()">Fine</button>
+   </div>
+  </div>
+  </div>
+</div>
+
+<div id="marcia" class="blocco" style="display: none;">
+  <h1 class="storia"><b><i>Riesci ad ottenere il controllo di tutto l'impero</i></b></h1>
+    <div class="scelta" class="container-fluid">
+      <div class="row">
+   <div class="col-sm" style="text-align: center;">
+    <button type="button" class="btn btn-outline-dark btn-block"  onclick="win()">Complimenti!</button>
+   </div>
+  </div>
+  </div>
+</div>
+
+  </div>
+ </div>
+  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
